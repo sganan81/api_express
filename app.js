@@ -1,28 +1,10 @@
-const axios = require('axios').default;
-require('dotenv').config();
-const express = require('express');
+//Orden sugerido de importaciones
+//1 - En primer lugar se importadn los paquetes propios de node
+require('dotenv').config(); //2 - Paquetes de terceros
+const Server = require('./models/server'); //3- Paquetes nuestros
 
-const app = express();
-const port = process.env.PORT;
-const api_key = process.env.API_KEY;
+//Instanciamos la clase Server
+const server = new Server();
 
-app.get('/', (req, res) => {
-  res.send('Home API!')
-})
-
-app.get('/populares', (req, res) => {
-    // Make a request for a user with a given ID
-    axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=en-US&page=1`)
-    .then((response) =>{
-        // handle success
-        console.log(response.status);
-        console.log(response.data);
-        res.json(response.data);
-    }).catch(
-      (error) => console.log(error)
-    )
-})
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+//Invocamos el método listen para levantar nuestro servidor
+server.listen();
