@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1"
+  },
+  "name": "api_express",
+  "version": "1.0.0",
+  "description": "Versión básica de una api con Express.js",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sganan81/api_express.git"
+  },
+  "author": "Sebastián Gañán",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sganan81/api_express/issues"
+  },
+  "homepage": "https://github.com/sganan81/api_express#readme"
+}
